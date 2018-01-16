@@ -17,13 +17,27 @@ header {
     transform: translate(-50%, -50%);
 }
 
-.banner-wrapper {
+div.absolute-wrapper {
     position: absolute;
     width: 100%;
-    bottom: 25px;
 
-    h1 {
+    &.banner {
+        bottom: 25px;
+
+        h1 {
+            text-align: center;
+        }
+    }
+    
+    &.background-logo {
+        bottom: 60px;
         text-align: center;
+        
+        img {
+            height: 400px;
+            width: auto;
+            opacity: 0.75;
+        }
     }
 }
 
@@ -38,7 +52,7 @@ header {
         transition: opacity @transition-time;
         text-decoration: none;
     }
-    
+
     a:hover,
     a:active {
         opacity: 0.8;
